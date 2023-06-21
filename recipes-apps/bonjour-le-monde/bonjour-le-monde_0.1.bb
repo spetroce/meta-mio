@@ -1,5 +1,5 @@
-SUMMARY = "Hello world recipe"
-DESCRIPTION = "A simple program that prints Hello, World! to the console."
+SUMMARY = "Bonjour le monde recipe"
+DESCRIPTION = "A simple program that prints Bonjour le monde! to the console."
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
 
@@ -14,11 +14,11 @@ TARGET_CC_ARCH += "${LDFLAGS}"
 
 # Cross-compile source code
 do_compile() {
-  ${CC} ${CFLAGS} ${LDFLAGS} hello_world.c -o hello_world
+  ${CC} ${CFLAGS} ${LDFLAGS} bonjour_le_monde.c -o bonjour_le_monde
 }
 
 # Create /usr/bin in rootfs and copy program to it
 do_install() {
     install -d ${D}${bindir}
-    install -m 0755 hello_world ${D}${bindir}
+    install -m 0755 bonjour_le_monde ${D}${bindir}
 }
